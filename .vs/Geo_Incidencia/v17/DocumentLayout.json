@@ -1,0 +1,66 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Geo_Incidencia\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E12651D1-1F36-4E60-AB7C-25485A252C24}|Backend_Geo_Incidencia.Domain\\Backend_Geo_Incidencia.Domain.csproj|d:\\geo_incidencia\\backend_geo_incidencia.domain\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E12651D1-1F36-4E60-AB7C-25485A252C24}|Backend_Geo_Incidencia.Domain\\Backend_Geo_Incidencia.Domain.csproj|solutionrelative:backend_geo_incidencia.domain\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E269A4C1-9E2A-4EB4-888C-D54FBDD9BE73}|Backend_Geo_Incidencia.Shared\\Backend_Geo_Incidencia.Shared.csproj|d:\\geo_incidencia\\backend_geo_incidencia.shared\\dbconstantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E269A4C1-9E2A-4EB4-888C-D54FBDD9BE73}|Backend_Geo_Incidencia.Shared\\Backend_Geo_Incidencia.Shared.csproj|solutionrelative:backend_geo_incidencia.shared\\dbconstantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IUsuarioRepository.cs",
+              "DocumentMoniker": "D:\\Geo_Incidencia\\Backend_Geo_Incidencia.Domain\\Interfaces\\IUsuarioRepository.cs",
+              "RelativeDocumentMoniker": "Backend_Geo_Incidencia.Domain\\Interfaces\\IUsuarioRepository.cs",
+              "ToolTip": "D:\\Geo_Incidencia\\Backend_Geo_Incidencia.Domain\\Interfaces\\IUsuarioRepository.cs",
+              "RelativeToolTip": "Backend_Geo_Incidencia.Domain\\Interfaces\\IUsuarioRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T20:47:34.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DbConstantes.cs",
+              "DocumentMoniker": "D:\\Geo_Incidencia\\Backend_Geo_Incidencia.Shared\\DbConstantes.cs",
+              "RelativeDocumentMoniker": "Backend_Geo_Incidencia.Shared\\DbConstantes.cs",
+              "ToolTip": "D:\\Geo_Incidencia\\Backend_Geo_Incidencia.Shared\\DbConstantes.cs",
+              "RelativeToolTip": "Backend_Geo_Incidencia.Shared\\DbConstantes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T20:33:22.428Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+@Backend_Geo_Incidencia.API_HostAddress = http://localhost:5273
+
+GET {{Backend_Geo_Incidencia.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

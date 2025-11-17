@@ -1,0 +1,11 @@
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\bin\Debug\net9.0\Backend_Geo_Incidencia.Domain.deps.json
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\bin\Debug\net9.0\Backend_Geo_Incidencia.Domain.dll
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\bin\Debug\net9.0\Backend_Geo_Incidencia.Domain.pdb
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\obj\Debug\net9.0\Backend_Geo_Incidencia.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\obj\Debug\net9.0\Backend_Geo_Incidencia.Domain.AssemblyInfoInputs.cache
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\obj\Debug\net9.0\Backend_Geo_Incidencia.Domain.AssemblyInfo.cs
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\obj\Debug\net9.0\Backend_Geo_Incidencia.Domain.csproj.CoreCompileInputs.cache
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\obj\Debug\net9.0\Backend_Geo_Incidencia.Domain.dll
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\obj\Debug\net9.0\refint\Backend_Geo_Incidencia.Domain.dll
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\obj\Debug\net9.0\Backend_Geo_Incidencia.Domain.pdb
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\obj\Debug\net9.0\ref\Backend_Geo_Incidencia.Domain.dll

@@ -1,0 +1,6 @@
+D:\Geo_Incidencia\Geo_Incidencias_Db\bin\Debug\Geo_Incidencias_Db.dacpac
+D:\Geo_Incidencia\Geo_Incidencias_Db\bin\Debug\Geo_Incidencias_Db.dll
+D:\Geo_Incidencia\Geo_Incidencias_Db\bin\Debug\Geo_Incidencias_Db.pdb
+D:\Geo_Incidencia\Geo_Incidencias_Db\obj\Debug\Geo_Incidencias_Db.sqlproj.AssemblyReference.cache
+D:\Geo_Incidencia\Geo_Incidencias_Db\obj\Debug\Geo_Incidencias_Db.dll
+D:\Geo_Incidencia\Geo_Incidencias_Db\obj\Debug\Geo_Incidencias_Db.pdb

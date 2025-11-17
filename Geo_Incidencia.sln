@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36327.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend_Geo_Incidencia.Application", "Backend_Geo_Incidencia.Application\Backend_Geo_Incidencia.Application.csproj", "{C9EA6F08-2226-4DDD-B290-47750E7B491C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend_Geo_Incidencia.Domain", "Backend_Geo_Incidencia.Domain\Backend_Geo_Incidencia.Domain.csproj", "{E12651D1-1F36-4E60-AB7C-25485A252C24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend_Geo_Incidencia.Infrastructure", "Backend_Geo_Incidencia.Infrastructure\Backend_Geo_Incidencia.Infrastructure.csproj", "{B71BB340-E0E2-4C13-8FC3-FAEBB853079D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend_Geo_Incidencia.API", "Backend_Geo_Incidencia.API\Backend_Geo_Incidencia.API.csproj", "{DB146329-B9F3-4856-A048-008521DC872C}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Geo_Incidencias_Db", "Geo_Incidencias_Db\Geo_Incidencias_Db.sqlproj", "{19CC7B34-4075-4D3A-9D12-3EA43C6D4F3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend_Geo_Incidencia.Shared", "Backend_Geo_Incidencia.Shared\Backend_Geo_Incidencia.Shared.csproj", "{E269A4C1-9E2A-4EB4-888C-D54FBDD9BE73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9EA6F08-2226-4DDD-B290-47750E7B491C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9EA6F08-2226-4DDD-B290-47750E7B491C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9EA6F08-2226-4DDD-B290-47750E7B491C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9EA6F08-2226-4DDD-B290-47750E7B491C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E12651D1-1F36-4E60-AB7C-25485A252C24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E12651D1-1F36-4E60-AB7C-25485A252C24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E12651D1-1F36-4E60-AB7C-25485A252C24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E12651D1-1F36-4E60-AB7C-25485A252C24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B71BB340-E0E2-4C13-8FC3-FAEBB853079D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B71BB340-E0E2-4C13-8FC3-FAEBB853079D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B71BB340-E0E2-4C13-8FC3-FAEBB853079D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B71BB340-E0E2-4C13-8FC3-FAEBB853079D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB146329-B9F3-4856-A048-008521DC872C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB146329-B9F3-4856-A048-008521DC872C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB146329-B9F3-4856-A048-008521DC872C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB146329-B9F3-4856-A048-008521DC872C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19CC7B34-4075-4D3A-9D12-3EA43C6D4F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19CC7B34-4075-4D3A-9D12-3EA43C6D4F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19CC7B34-4075-4D3A-9D12-3EA43C6D4F3C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{19CC7B34-4075-4D3A-9D12-3EA43C6D4F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19CC7B34-4075-4D3A-9D12-3EA43C6D4F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19CC7B34-4075-4D3A-9D12-3EA43C6D4F3C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E269A4C1-9E2A-4EB4-888C-D54FBDD9BE73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E269A4C1-9E2A-4EB4-888C-D54FBDD9BE73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E269A4C1-9E2A-4EB4-888C-D54FBDD9BE73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E269A4C1-9E2A-4EB4-888C-D54FBDD9BE73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B0576CF-51AF-48DE-99E6-D419478949AF}
+	EndGlobalSection
+EndGlobal
