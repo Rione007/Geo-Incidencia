@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "Backend_Geo_Incidencia.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Backend_Geo_Incidencia.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Backend_Geo_Incidencia.Shared.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Backend_Geo_Incidencia.Shared/1.0.0": {
+      "type": "project",
+      "path": "../Backend_Geo_Incidencia.Shared/Backend_Geo_Incidencia.Shared.csproj",
+      "msbuildProject": "../Backend_Geo_Incidencia.Shared/Backend_Geo_Incidencia.Shared.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "Backend_Geo_Incidencia.Shared >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ander\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Geo_Incidencia\\Backend_Geo_Incidencia.Shared\\Backend_Geo_Incidencia.Shared.csproj": {
+              "projectPath": "D:\\Geo_Incidencia\\Backend_Geo_Incidencia.Shared\\Backend_Geo_Incidencia.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
