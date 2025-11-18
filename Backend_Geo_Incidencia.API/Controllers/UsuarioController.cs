@@ -1,4 +1,5 @@
-﻿using Backend_Geo_Incidencia.Application.Features.Usuario.Commands.RegistrarUsuario;
+﻿using Backend_Geo_Incidencia.Application.Features.Usuario.Commands.ActualizarUsuario;
+using Backend_Geo_Incidencia.Application.Features.Usuario.Commands.RegistrarUsuario;
 using Backend_Geo_Incidencia.Application.Models;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -35,6 +36,16 @@ namespace Backend_Geo_Incidencia.API.Controllers
                 return BadRequest(ApiResponse<object>.Fail(result.Mensaje, result.CodigoRespuesta));
             }
            
+        }
+
+        [HttpPut("Actualizar")]
+        public async Task<IActionResult> ActualizarUsuario([FromBody] ActualizarUsuarioCommand request)
+        {
+            var result = await Mediator.Send(request);
+            if (result.Exito)
+                return Ok(ApiResponse<ActualizarUsuarioResponse>.Ok(result, "Actualización exitosa"));
+
+            return BadRequest(ApiResponse<object>.Fail(result.Mensaje, result.CodigoRespuesta));
         }
     }
 }
