@@ -62,4 +62,9 @@
   <ItemGroup>
     <None Include="Geo_Incidencias_Db.publish.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="Procedimientos\SP_LOGIN_USUARIO.sql" />
+    <Build Include="Procedimientos\SP_OBTENER_CUENTA_POR_ID.sql" />
+    <Build Include="Procedimientos\SP_CREAR_CUENTA.sql" />
+  </ItemGroup>
 </Project>

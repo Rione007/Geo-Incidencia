@@ -9,3 +9,8 @@ D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\obj\Debug\net9.0\Backend_Geo_Inc
 D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\obj\Debug\net9.0\refint\Backend_Geo_Incidencia.Domain.dll
 D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\obj\Debug\net9.0\Backend_Geo_Incidencia.Domain.pdb
 D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\obj\Debug\net9.0\ref\Backend_Geo_Incidencia.Domain.dll
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\bin\Debug\net9.0\Backend_Geo_Incidencia.Shared.dll
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\bin\Debug\net9.0\Backend_Geo_Incidencia.Shared.pdb
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\obj\Debug\net9.0\Backend_Geo_Incidencia.Domain.csproj.AssemblyReference.cache
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\obj\Debug\net9.0\Backend_Geo_Incidencia.Domain.sourcelink.json
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Domain\obj\Debug\net9.0\Backend_.101BADA9.Up2Date

@@ -317,6 +317,29 @@
             "related": ".xml"
           }
         }
+      },
+      "Backend_Geo_Incidencia.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Backend_Geo_Incidencia.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Backend_Geo_Incidencia.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Backend_Geo_Incidencia.Domain.dll": {}
+        }
+      },
+      "Backend_Geo_Incidencia.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Backend_Geo_Incidencia.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Backend_Geo_Incidencia.Shared.dll": {}
+        }
       }
     }
   },
@@ -786,11 +809,22 @@
         "system.identitymodel.tokens.jwt.8.14.0.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
       ]
+    },
+    "Backend_Geo_Incidencia.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Backend_Geo_Incidencia.Domain/Backend_Geo_Incidencia.Domain.csproj",
+      "msbuildProject": "../Backend_Geo_Incidencia.Domain/Backend_Geo_Incidencia.Domain.csproj"
+    },
+    "Backend_Geo_Incidencia.Shared/1.0.0": {
+      "type": "project",
+      "path": "../Backend_Geo_Incidencia.Shared/Backend_Geo_Incidencia.Shared.csproj",
+      "msbuildProject": "../Backend_Geo_Incidencia.Shared/Backend_Geo_Incidencia.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
+      "Backend_Geo_Incidencia.Domain >= 1.0.0",
       "FluentValidation >= 12.0.0",
       "FluentValidation.AspNetCore >= 11.3.1",
       "FluentValidation.DependencyInjectionExtensions >= 12.0.0",
@@ -833,7 +867,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Geo_Incidencia\\Backend_Geo_Incidencia.Domain\\Backend_Geo_Incidencia.Domain.csproj": {
+              "projectPath": "D:\\Geo_Incidencia\\Backend_Geo_Incidencia.Domain\\Backend_Geo_Incidencia.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

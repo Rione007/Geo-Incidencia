@@ -8,7 +8,7 @@ namespace Backend_Geo_Incidencia.Domain.Entities
 {
     public class Respuesta
     {
-        public decimal Id { get; set; }
+        public int Id { get; set; }
         public Int32 Fila { get; set; }
         public Int32 Error { get; set; }
         public string Estado { get; set; }

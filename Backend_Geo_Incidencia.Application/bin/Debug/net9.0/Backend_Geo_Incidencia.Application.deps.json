@@ -9,6 +9,7 @@
       "Backend_Geo_Incidencia.Application/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "Backend_Geo_Incidencia.Domain": "1.0.0",
           "FluentValidation": "12.0.0",
           "FluentValidation.AspNetCore": "11.3.1",
           "FluentValidation.DependencyInjectionExtensions": "12.0.0",
@@ -182,6 +183,25 @@
             "fileVersion": "8.14.0.60815"
           }
         }
+      },
+      "Backend_Geo_Incidencia.Domain/1.0.0": {
+        "dependencies": {
+          "Backend_Geo_Incidencia.Shared": "1.0.0"
+        },
+        "runtime": {
+          "Backend_Geo_Incidencia.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Backend_Geo_Incidencia.Shared/1.0.0": {
+        "runtime": {
+          "Backend_Geo_Incidencia.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -302,6 +322,16 @@
       "sha512": "sha512-EYGgN/S+HK7S6F3GaaPLFAfK0UzMrkXFyWCvXpQWFYmZln3dqtbyIO7VuTM/iIIPMzkelg8ZLlBPvMhxj6nOAA==",
       "path": "system.identitymodel.tokens.jwt/8.14.0",
       "hashPath": "system.identitymodel.tokens.jwt.8.14.0.nupkg.sha512"
+    },
+    "Backend_Geo_Incidencia.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Backend_Geo_Incidencia.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

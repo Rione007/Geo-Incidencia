@@ -1,12 +1,55 @@
-﻿/*
-No cambie las variables de nombre o ruta de acceso de la base de datos.
-Cualquier variable sqlcmd será correctamente sustituida durante 
-la compilación y la implementación.
-*/
-ALTER DATABASE [$(DatabaseName)]
-	ADD FILE
-	(
-		NAME = [SP_CREAR_CUENTA],
-		FILENAME = '$(DefaultDataPath)$(DefaultFilePrefix)_SP_CREAR_CUENTA.ndf'
-	)
-	
+﻿CREATE PROCEDURE [dbo].[SP_CREAR_CUENTA]
+    @EMAIL         NCHAR(25),
+    @PASSWORD       CHAR(30),
+    @NOMBRE         VARCHAR(80)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @ID_USUARIO INT = 0;
+    DECLARE @FILA INT = 0;
+    DECLARE @ERROR INT = 0;
+    DECLARE @MENSAJE NVARCHAR(200) = '';
+
+    BEGIN TRY
+        BEGIN TRAN;
+
+        -- Verificar si ya existe una cuenta con el mismo nombre
+        IF EXISTS (SELECT 1 FROM USUARIO WHERE RTRIM(LTRIM(EMAIL)) = RTRIM(LTRIM(@EMAIL)))
+        BEGIN
+            SET @MENSAJE = 'La Correo ya existe.';
+            SET @ERROR = 1;
+        END
+        ELSE
+        BEGIN
+            INSERT INTO USUARIO (
+                NOMBRE,
+                EMAIL,
+                CONTRASENA_HASH
+            )
+            VALUES (
+            @NOMBRE,
+            @EMAIL,
+            @PASSWORD
+            );
+
+            SET @FILA = @@ROWCOUNT;
+            SET @ID_USUARIO = SCOPE_IDENTITY();
+            SET @MENSAJE = 'Cuenta creada correctamente.';
+        END
+
+        COMMIT TRAN;
+    END TRY
+    BEGIN CATCH
+        ROLLBACK TRAN;
+        SET @ERROR = ERROR_NUMBER();
+        SET @MENSAJE = ERROR_MESSAGE();
+    END CATCH;
+
+    SELECT 
+        @ID_USUARIO AS ID,
+        @FILA AS FILA,
+        @ERROR AS ERROR,
+        @MENSAJE AS MENSAJE;
+END;
+

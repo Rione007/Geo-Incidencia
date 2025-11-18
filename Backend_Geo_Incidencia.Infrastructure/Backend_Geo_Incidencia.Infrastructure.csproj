@@ -14,4 +14,8 @@
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.10" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Backend_Geo_Incidencia.Domain\Backend_Geo_Incidencia.Domain.csproj" />
+	</ItemGroup>
+
 </Project>

@@ -16,5 +16,13 @@
 		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="9.0.6" />
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.14.0" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Features\Usuario\Commands\Login\" />
+	  <Folder Include="Features\Usuario\Commands\ActualizarUsuario\" />
+	  <Folder Include="Features\Usuario\Commands\ObtenerUsuario\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Backend_Geo_Incidencia.Domain\Backend_Geo_Incidencia.Domain.csproj" />
+	</ItemGroup>
 
 </Project>

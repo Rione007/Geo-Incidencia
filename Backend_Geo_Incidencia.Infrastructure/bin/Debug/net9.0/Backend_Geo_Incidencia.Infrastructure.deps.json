@@ -9,6 +9,7 @@
       "Backend_Geo_Incidencia.Infrastructure/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "Backend_Geo_Incidencia.Domain": "1.0.0",
           "Dapper": "2.1.66",
           "FluentValidation.DependencyInjectionExtensions": "12.0.0",
           "Microsoft.Data.SqlClient": "6.1.2",
@@ -474,6 +475,25 @@
             "fileVersion": "9.0.425.16305"
           }
         }
+      },
+      "Backend_Geo_Incidencia.Domain/1.0.0": {
+        "dependencies": {
+          "Backend_Geo_Incidencia.Shared": "1.0.0"
+        },
+        "runtime": {
+          "Backend_Geo_Incidencia.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Backend_Geo_Incidencia.Shared/1.0.0": {
+        "runtime": {
+          "Backend_Geo_Incidencia.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -727,6 +747,16 @@
       "sha512": "sha512-o94k2RKuAce3GeDMlUvIXlhVa1kWpJw95E6C9LwW0KlG0nj5+SgCiIxJ2Eroqb9sLtG1mEMbFttZIBZ13EJPvQ==",
       "path": "system.security.cryptography.protecteddata/9.0.4",
       "hashPath": "system.security.cryptography.protecteddata.9.0.4.nupkg.sha512"
+    },
+    "Backend_Geo_Incidencia.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Backend_Geo_Incidencia.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

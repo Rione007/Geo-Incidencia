@@ -7,14 +7,30 @@
   "targets": {
     ".NETCoreApp,Version=v9.0": {
       "Backend_Geo_Incidencia.Domain/1.0.0": {
+        "dependencies": {
+          "Backend_Geo_Incidencia.Shared": "1.0.0"
+        },
         "runtime": {
           "Backend_Geo_Incidencia.Domain.dll": {}
+        }
+      },
+      "Backend_Geo_Incidencia.Shared/1.0.0": {
+        "runtime": {
+          "Backend_Geo_Incidencia.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "Backend_Geo_Incidencia.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Backend_Geo_Incidencia.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
