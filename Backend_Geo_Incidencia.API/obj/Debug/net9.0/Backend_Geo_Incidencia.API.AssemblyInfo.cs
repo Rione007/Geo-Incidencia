@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Backend_Geo_Incidencia.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70f1bf9f7bd1446cf8af76d88e8ec3dc1cc8ba3b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a476efdb3a22e4639cef628c919fd05013494a5e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Backend_Geo_Incidencia.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Backend_Geo_Incidencia.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

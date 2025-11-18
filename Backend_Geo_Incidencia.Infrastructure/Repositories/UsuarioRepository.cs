@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Dapper.SqlMapper;
 
 namespace Backend_Geo_Incidencia.Infrastructure.Repositories
 {
@@ -44,19 +45,82 @@ namespace Backend_Geo_Incidencia.Infrastructure.Repositories
             return respuesta;
         }
 
-        public Task<Respuesta> LoginAsync(UsuarioEntity cuenta)
+        public async Task<Respuesta> LoginAsync(UsuarioEntity cuenta)
         {
-            throw new NotImplementedException();
+            Respuesta respuesta = null;
+            var storeProcedure = DbConstantes.SpActualizarCuenta;
+            try
+            {
+                var connection = _factoryConnection.GetConnection();
+                respuesta = await connection.QueryFirstAsync<Respuesta>(storeProcedure, new
+                {
+                    EMAIL = cuenta.EMAIL,                    
+                    CONTRASENA_HASH = cuenta.CONTRASENA_HASH,
+
+                }, commandType: System.Data.CommandType.StoredProcedure);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                _factoryConnection.CloseConnection();
+            }
+            return respuesta;
         }
 
-        public Task<UsuarioEntity?> ObtenerPorIdAsync(int id)
+        public async Task<UsuarioEntity?> ObtenerPorIdAsync(int id)
         {
-            throw new NotImplementedException();
+            UsuarioEntity respuesta = null;
+            var storeProcedure = DbConstantes.SpObtenerCuentaId;
+            try
+            {
+                var connection = _factoryConnection.GetConnection();
+                respuesta = await connection.QueryFirstAsync<UsuarioEntity>(storeProcedure, new
+                {
+                    ID_USUARIO = id
+
+                }, commandType: System.Data.CommandType.StoredProcedure);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                _factoryConnection.CloseConnection();
+            }
+            return respuesta;
         }
 
-        public Task<Respuesta> UpdateAsync(UsuarioEntity entity)
+        public async Task<Respuesta> UpdateAsync(UsuarioEntity entity)
         {
-            throw new NotImplementedException();
+            Respuesta respuesta = null;
+            var storeProcedure = DbConstantes.SpActualizarCuenta;
+            try
+            {
+                var connection = _factoryConnection.GetConnection();
+                respuesta = await connection.QueryFirstAsync<Respuesta>(storeProcedure, new
+                {
+                    ID_USUARIO = entity.ID_USUARIO,
+                    NOMBRE = entity.NOMBRE,
+                    CONTRASENA_HASH = entity.CONTRASENA_HASH,
+
+                }, commandType: System.Data.CommandType.StoredProcedure);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                _factoryConnection.CloseConnection();
+            }
+            return respuesta;
         }
     }
 }

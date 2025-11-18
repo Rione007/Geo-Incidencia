@@ -15,7 +15,7 @@ namespace Backend_Geo_Incidencia.Application.Features.Usuario.Commands.Registrar
     }
     public class RegistrarUsuarioResponse
     {
-        public int id { get; set; }
+        public int id { get; set; } // si es objeto el objeto
         public string Mensaje { get; set; }
         public int CodigoRespuesta { get; set; }
         public bool Exito => CodigoRespuesta == 0;

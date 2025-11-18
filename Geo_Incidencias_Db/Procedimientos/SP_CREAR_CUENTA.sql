@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[SP_CREAR_CUENTA]
     @EMAIL         NCHAR(25),
-    @PASSWORD       CHAR(30),
+    @CONTRASENA_HASH       CHAR(30),
     @NOMBRE         VARCHAR(80)
 AS
 BEGIN
@@ -30,7 +30,7 @@ BEGIN
             VALUES (
             @NOMBRE,
             @EMAIL,
-            @PASSWORD
+            @CONTRASENA_HASH
             );
 
             SET @FILA = @@ROWCOUNT;
@@ -48,8 +48,8 @@ BEGIN
 
     SELECT 
         @ID_USUARIO AS ID,
-        @FILA AS FILA,
-        @ERROR AS ERROR,
+        @FILA AS FILA, --1 si es todo good 0 si esta mal
+        @ERROR AS ERROR,  --  0 si esta mal 
         @MENSAJE AS MENSAJE;
 END;
 
