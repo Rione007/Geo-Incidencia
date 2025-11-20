@@ -70,6 +70,10 @@
               "target": "Package",
               "version": "[12.1.0, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.7, )"
@@ -79,6 +83,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.10, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.14.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -579,6 +587,9 @@
             "projectReferences": {
               "D:\\Geo_Incidencia\\Backend_Geo_Incidencia.Domain\\Backend_Geo_Incidencia.Domain.csproj": {
                 "projectPath": "D:\\Geo_Incidencia\\Backend_Geo_Incidencia.Domain\\Backend_Geo_Incidencia.Domain.csproj"
+              },
+              "D:\\Geo_Incidencia\\Backend_Geo_Incidencia.Infrastructure\\Backend_Geo_Incidencia.Infrastructure.csproj": {
+                "projectPath": "D:\\Geo_Incidencia\\Backend_Geo_Incidencia.Infrastructure\\Backend_Geo_Incidencia.Infrastructure.csproj"
               }
             }
           }

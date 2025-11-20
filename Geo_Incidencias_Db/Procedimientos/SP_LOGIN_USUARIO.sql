@@ -1,29 +1,14 @@
 ﻿CREATE PROCEDURE [dbo].[SP_LOGIN_USUARIO]
-    @CORREO NVARCHAR(50),
-    @PASSWORD NVARCHAR(200)
+    @CORREO NVARCHAR(50)
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    DECLARE @ID_USUARIO INT = 0;
-    DECLARE @FILA INT = 0;
-
-    -- Buscar cuenta
-    SELECT TOP 1 @ID_USUARIO = ID_USUARIO
-    FROM USUARIO
-    WHERE RTRIM(LTRIM(EMAIL)) = @CORREO;
-
-    IF @ID_USUARIO > 0
-    BEGIN
-        IF EXISTS (
-            SELECT 1 FROM USUARIO 
-            WHERE ID_USUARIO = @ID_USUARIO 
-              AND CONTRASENA_HASH COLLATE Latin1_General_CS_AS = @PASSWORD COLLATE Latin1_General_CS_AS
-        )
-        BEGIN
-            SET @FILA = 1;
-        END
-    END
-
-    SELECT @ID_USUARIO AS ID, @FILA AS FILA;
+    SELECT 
+        U.ID_USUARIO,
+        U.CONTRASENA_HASH
+    FROM 
+        USUARIO U
+    WHERE 
+        EMAIL = @CORREO;
 END;

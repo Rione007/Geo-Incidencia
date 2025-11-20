@@ -9,7 +9,7 @@ namespace Backend_Geo_Incidencia.Domain.Interfaces
 {
     public interface IUsuarioRepository
     {
-        Task<Respuesta> LoginAsync(UsuarioEntity cuenta);
+        Task<UsuarioEntity> LoginAsync(string correo);
         Task<UsuarioEntity?> ObtenerPorIdAsync(int id);
         Task<Respuesta> CrearAsync(UsuarioEntity entity);
         Task<Respuesta> UpdateAsync(UsuarioEntity entity);

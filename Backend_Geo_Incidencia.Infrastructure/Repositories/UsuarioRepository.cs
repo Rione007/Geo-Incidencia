@@ -45,17 +45,16 @@ namespace Backend_Geo_Incidencia.Infrastructure.Repositories
             return respuesta;
         }
 
-        public async Task<Respuesta> LoginAsync(UsuarioEntity cuenta)
+        public async Task<UsuarioEntity> LoginAsync(string correo)
         {
-            Respuesta respuesta = null;
-            var storeProcedure = DbConstantes.SpActualizarCuenta;
+            UsuarioEntity respuesta = null;
+            var storeProcedure = DbConstantes.SpLoginUsuario;
             try
             {
                 var connection = _factoryConnection.GetConnection();
-                respuesta = await connection.QueryFirstAsync<Respuesta>(storeProcedure, new
+                respuesta = await connection.QueryFirstAsync<UsuarioEntity>(storeProcedure, new
                 {
-                    EMAIL = cuenta.EMAIL,                    
-                    CONTRASENA_HASH = cuenta.CONTRASENA_HASH,
+                    CORREO = correo
 
                 }, commandType: System.Data.CommandType.StoredProcedure);
 

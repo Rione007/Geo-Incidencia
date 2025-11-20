@@ -4,6 +4,11 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    SELECT * FROM dbo.USUARIO
+    SELECT 
+        ID_USUARIO,
+        NOMBRE,
+        EMAIL,
+        ROL
+    FROM dbo.USUARIO
     WHERE ID_USUARIO = @ID_USUARIO;
 END;

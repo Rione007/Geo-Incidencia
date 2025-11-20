@@ -16,3 +16,5 @@ D:\Geo_Incidencia\Backend_Geo_Incidencia.Application\bin\Debug\net9.0\Backend_Ge
 D:\Geo_Incidencia\Backend_Geo_Incidencia.Application\bin\Debug\net9.0\Backend_Geo_Incidencia.Domain.pdb
 D:\Geo_Incidencia\Backend_Geo_Incidencia.Application\bin\Debug\net9.0\Backend_Geo_Incidencia.Shared.pdb
 D:\Geo_Incidencia\Backend_Geo_Incidencia.Application\obj\Debug\net9.0\Backend_.B67CDE88.Up2Date
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Application\bin\Debug\net9.0\Backend_Geo_Incidencia.Infrastructure.dll
+D:\Geo_Incidencia\Backend_Geo_Incidencia.Application\bin\Debug\net9.0\Backend_Geo_Incidencia.Infrastructure.pdb

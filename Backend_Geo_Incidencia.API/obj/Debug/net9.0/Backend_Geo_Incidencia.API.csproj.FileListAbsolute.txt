@@ -177,3 +177,5 @@ D:\Geo_Incidencia\Backend_Geo_Incidencia.API\bin\Debug\net9.0\Backend_Geo_Incide
 D:\Geo_Incidencia\Backend_Geo_Incidencia.API\bin\Debug\net9.0\Backend_Geo_Incidencia.Domain.pdb
 D:\Geo_Incidencia\Backend_Geo_Incidencia.API\bin\Debug\net9.0\Backend_Geo_Incidencia.Shared.pdb
 D:\Geo_Incidencia\Backend_Geo_Incidencia.API\obj\Debug\net9.0\Backend_Geo_Incidencia.API.sourcelink.json
+D:\Geo_Incidencia\Backend_Geo_Incidencia.API\bin\Debug\net9.0\BCrypt.Net-Next.dll
+D:\Geo_Incidencia\Backend_Geo_Incidencia.API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

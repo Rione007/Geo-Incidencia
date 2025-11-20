@@ -1,4 +1,5 @@
 ﻿using Backend_Geo_Incidencia.Domain.Interfaces;
+using Backend_Geo_Incidencia.Infrastructure.Jwt;
 using Backend_Geo_Incidencia.Infrastructure.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,6 +23,7 @@ namespace Backend_Geo_Incidencia.Infrastructure.Extensions
             services.AddScoped<ITipoRepository, TipoRepository>();
             services.AddScoped<ISubtipoRepository, SubtipoRepository>();
             services.AddScoped<IPasswordHasher, BCryptPasswordHasher>();
+            services.AddScoped<IJwtService, JwtService>();
             Console.WriteLine("Infrastructure services registered.");
         }
     }
