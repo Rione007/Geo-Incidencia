@@ -9,7 +9,7 @@ namespace Backend_Geo_Incidencia.Domain.Interfaces
 {
     public interface ISubtipoRepository
     {
-        Task<List<SubtipoEntity>> ListarSubtipoPorTipoIdAsync(int tipoId);
+        Task<List<SubtipoEntity>> ListarSubtipoAsync();
         Task<SubtipoEntity?> ObtenerSubtipoPorIdAsync(int id);
 
     }
