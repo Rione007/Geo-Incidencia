@@ -67,5 +67,9 @@
     <Build Include="Procedimientos\SP_OBTENER_CUENTA_POR_ID.sql" />
     <Build Include="Procedimientos\SP_CREAR_CUENTA.sql" />
     <Build Include="Procedimientos\SP_ACTUALIZAR_USUARIO.sql" />
+    <Build Include="Procedimientos\SP_LISTAR_SUBTIPOS.sql" />
+    <Build Include="Procedimientos\SP_LISTAR_TIPOS.sql" />
+    <Build Include="Procedimientos\SP_OBTENER_SUBTIPO_POR_ID.sql" />
+    <Build Include="Procedimientos\SP_OBTENER_TIPO_POR_ID.sql" />
   </ItemGroup>
 </Project>

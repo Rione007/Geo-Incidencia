@@ -19,7 +19,7 @@ namespace Backend_Geo_Incidencia.Infrastructure.Repositories
             _factoryConnection = factoryConnection;
         }
 
-        public async Task<List<SubtipoEntity>> ListarSubtipoAsync(int tipoId)
+        public async Task<List<SubtipoEntity>> ListarSubtipoAsync()
         {
             IEnumerable<SubtipoEntity> resultado = Enumerable.Empty<SubtipoEntity>();
             var storeProcedure = DbConstantes.SpListarSubtipos;
