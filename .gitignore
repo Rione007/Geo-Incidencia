@@ -11,6 +11,16 @@ obj/
 packages/
 *.nupkg
 *.snupkg
+project.assets.json
+project.lock.json
+
+# Compiled files
+*.dll
+*.exe
+*.pdb
+
+# Cache
+*.cache
 
 # Logs
 *.log
