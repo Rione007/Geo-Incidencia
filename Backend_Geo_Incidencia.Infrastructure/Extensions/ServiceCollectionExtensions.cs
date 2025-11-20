@@ -21,6 +21,7 @@ namespace Backend_Geo_Incidencia.Infrastructure.Extensions
             services.AddScoped<IIncidenciaRepository, IncidenciaRepository>();
             services.AddScoped<ITipoRepository, TipoRepository>();
             services.AddScoped<ISubtipoRepository, SubtipoRepository>();
+            services.AddScoped<IPasswordHasher, BCryptPasswordHasher>();
             Console.WriteLine("Infrastructure services registered.");
         }
     }
