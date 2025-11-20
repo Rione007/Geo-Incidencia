@@ -13,6 +13,5 @@ namespace Backend_Geo_Incidencia.Application.Features.Usuario.Dtos
         public string? NOMBRE { get; set; }
         public string? EMAIL { get; set; }
         public string? ROL { get; set; }
-        public DateTime FECHA_REGISTRO { get; set; }
     }
 }

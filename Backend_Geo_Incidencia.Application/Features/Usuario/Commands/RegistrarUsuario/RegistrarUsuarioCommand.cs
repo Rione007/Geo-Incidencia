@@ -11,7 +11,7 @@ namespace Backend_Geo_Incidencia.Application.Features.Usuario.Commands.Registrar
     {
         public string? NOMBRE { get; set; }
         public string? EMAIL { get; set; }
-        public string? CONTRASENA_HASH { get; set; }
+        public string? CONTRASENA{ get; set; }
     }
     public class RegistrarUsuarioResponse
     {

@@ -17,7 +17,7 @@ namespace Backend_Geo_Incidencia.Application.Features.Usuario.Commands.Registrar
             RuleFor(x => x.EMAIL)
                 .NotEmpty()
                 .EmailAddress().WithMessage("El correo electrónico no es válido.");
-            RuleFor(x => x.CONTRASENA_HASH)
+            RuleFor(x => x.CONTRASENA)
                 .NotEmpty()
                 .MaximumLength(8).WithMessage("La contraseña no puede exceder los 8 caracteres.")
                 .MinimumLength(6).WithMessage("La contraseña debe tener al menos 6 caracteres.");

@@ -29,7 +29,7 @@ namespace Backend_Geo_Incidencia.API.Controllers
             {
                 NOMBRE = dto.NOMBRE,
                 EMAIL = dto.EMAIL,
-                CONTRASENA_HASH = dto.CONTRASENA_HASH
+                CONTRASENA = dto.CONTRASENA
             };
             var result = await Mediator.Send(command);
             if (result.Exito)

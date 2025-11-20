@@ -66,5 +66,6 @@
     <Build Include="Procedimientos\SP_LOGIN_USUARIO.sql" />
     <Build Include="Procedimientos\SP_OBTENER_CUENTA_POR_ID.sql" />
     <Build Include="Procedimientos\SP_CREAR_CUENTA.sql" />
+    <Build Include="Procedimientos\SP_ACTUALIZAR_USUARIO.sql" />
   </ItemGroup>
 </Project>

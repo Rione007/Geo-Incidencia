@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Backend_Geo_Incidencia.Application.Features.Usuario.Commands.RegistrarUsuario;
+using Backend_Geo_Incidencia.Domain.Entities;
 using Backend_Geo_Incidencia.Domain.Interfaces;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -16,24 +17,33 @@ namespace Backend_Geo_Incidencia.Application.Features.Usuario.Commands.Actualiza
         private readonly IUsuarioRepository _usuarioRepository;
         private readonly IMapper _mapper;
         private readonly ILogger<ActualizarUsuarioCommandHandler> _logger;
+        private readonly IPasswordHasher _passwordHasher;
 
-        public ActualizarUsuarioCommandHandler(IUsuarioRepository usuarioRepository, IMapper mapper, ILogger<ActualizarUsuarioCommandHandler> logger)
+        public ActualizarUsuarioCommandHandler(IUsuarioRepository usuarioRepository, IMapper mapper, ILogger<ActualizarUsuarioCommandHandler> logger, IPasswordHasher passwordHasher)
         {
             _usuarioRepository = usuarioRepository;
             _mapper = mapper;
             _logger = logger;
+            _passwordHasher = passwordHasher;
         }
 
         public async Task<ActualizarUsuarioResponse> Handle(ActualizarUsuarioCommand request, CancellationToken cancellationToken)
         {
             try
             {
-                var usuarioActualizar = new Backend_Geo_Incidencia.Domain.Entities.UsuarioEntity
+                string? hash = null;
+
+                if (!string.IsNullOrWhiteSpace(request.CONTRASENA))
+                {
+                    hash = _passwordHasher.Hash(request.CONTRASENA);
+                }
+                var usuarioActualizar = new UsuarioEntity
                 {
                     ID_USUARIO = request.ID_USUARIO,
-                    NOMBRE = request.NOMBRE,
-                    CONTRASENA_HASH = request.CONTRASENA_HASH
+                    NOMBRE = string.IsNullOrWhiteSpace(request.NOMBRE) ? null : request.NOMBRE,
+                    CONTRASENA_HASH = string.IsNullOrWhiteSpace(request.CONTRASENA) ? null : hash
                 };
+
 
                 var respuesta = await _usuarioRepository.UpdateAsync(usuarioActualizar);
 

@@ -12,7 +12,7 @@ namespace Backend_Geo_Incidencia.Application.Features.Usuario.Commands.Actualiza
     {
         public int ID_USUARIO { get; set; }
         public string? NOMBRE { get; set; }
-        public string? CONTRASENA_HASH { get; set; }
+        public string? CONTRASENA { get; set; }
     }
     public class ActualizarUsuarioResponse
     {
