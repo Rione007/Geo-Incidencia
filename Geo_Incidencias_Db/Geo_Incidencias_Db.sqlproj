@@ -71,5 +71,11 @@
     <Build Include="Procedimientos\SP_LISTAR_TIPOS.sql" />
     <Build Include="Procedimientos\SP_OBTENER_SUBTIPO_POR_ID.sql" />
     <Build Include="Procedimientos\SP_OBTENER_TIPO_POR_ID.sql" />
+    <Build Include="Procedimientos\SP_BUSCAR_POR_AREA.sql" />
+    <Build Include="Procedimientos\SP_BUSCAR_POR_RADIO.sql" />
+    <Build Include="Procedimientos\SP_OBTENER_HEATMAP.sql" />
+    <Build Include="Procedimientos\SP_REGISTRAR_INCIDENCIA.sql" />
+    <Build Include="Procedimientos\SP_LISTAR_INCIDENCIAS_POR_USUARIO.sql" />
+    <Build Include="Procedimientos\SP_OBTENER_INCIDENCIA_POR_ID.sql" />
   </ItemGroup>
 </Project>
