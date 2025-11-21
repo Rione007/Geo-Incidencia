@@ -1,0 +1,22 @@
+﻿CREATE PROCEDURE SP_OBTENER_INCIDENCIA_POR_ID
+(
+    @IdIncidencia INT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        ID_INCIDENCIA,
+        ID_USUARIO,
+        LATITUD,
+        LONGITUD,
+        ID_TIPO,
+        ID_SUBTIPO,
+        DESCRIPCION,
+        FECHA_INCIDENCIA,
+        FOTO_URL,
+        DIRECCION_REFERENCIA
+    FROM INCIDENCIA
+    WHERE ID_INCIDENCIA = @IdIncidencia;
+END

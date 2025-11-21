@@ -13,6 +13,13 @@
         public const string SpListarSubtipos = "dbo.SP_LISTAR_SUBTIPOS";
         public const string SpObtenerSubtipoPorId = "dbo.SP_OBTENER_SUBTIPO_POR_ID";
 
+        public const string SpRegistrarIncidencia = "dbo.SP_REGISTRAR_INCIDENCIA";
+        public const string SpObtenerIncidenciaPorId = "dbo.SP_OBTENER_INCIDENCIA_POR_ID";
+        public const string SpListarIncidenciasPorUsuarioId = "dbo.SP_LISTAR_INCIDENCIAS_POR_USUARIO_ID";
+        public const string SpBuscarIncidenciasPorArea = "dbo.SP_INCIDENCIAS_BUSCAR_POR_AREA";
+        public const string SpBuscarIncidenciasPorRadio = "dbo.SP_INCIDENCIAS_BUSCAR_POR_RADIO";
+        public const string SpObtenerHeatmap = "dbo.SP_INCIDENCIAS_OBTENER_HEATMAP";
+
 
     }
 }

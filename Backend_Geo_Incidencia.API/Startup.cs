@@ -88,11 +88,31 @@ namespace Backend_Geo_Incidencia.API
 
             services.AddAuthorization();
 
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy("CorsDev", builder =>
+            //    {
+            //        builder.WithOrigins(
+            //                 "http://localhost:8080"      // para desarrollo 
+            //                )
+            //               .AllowAnyHeader()
+            //               .AllowAnyMethod()
+            //               .AllowCredentials();
+            //    });
+            //});
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            });
         }
+
+        
         public void Configure(WebApplication app, IWebHostEnvironment env)
         {
             app.UseHttpsRedirection();
             app.UseAuthentication();
+            app.UseCors("AllowAll");
 
             app.UseAuthorization();
 
