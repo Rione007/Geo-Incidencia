@@ -199,7 +199,7 @@ namespace Backend_Geo_Incidencia.Infrastructure.Repositories
                 var connection = _factoryConnection.GetConnection();
 
                 // Ejecutamos el SP y esperamos una fila con (Fila, Mensaje, Id) 
-                respuesta = await connection.QueryFirstOrDefaultAsync(
+                respuesta = await connection.QueryFirstOrDefaultAsync<Respuesta>(
                     storedProcedure,
                     new
                     {
