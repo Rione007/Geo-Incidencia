@@ -10,4 +10,8 @@
     <ProjectReference Include="..\Backend_Geo_Incidencia.Shared\Backend_Geo_Incidencia.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="QueryResponse\" />
+  </ItemGroup>
+
 </Project>

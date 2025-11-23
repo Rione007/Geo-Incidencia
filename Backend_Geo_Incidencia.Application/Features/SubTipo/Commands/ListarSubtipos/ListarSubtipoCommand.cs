@@ -10,6 +10,7 @@ namespace Backend_Geo_Incidencia.Application.Features.SubTipo.Commands.ListarSub
 {
     public class ListarSubtipoCommand : IRequest<List<ListarSubtipoResponse>>
     {
+
     }
 
     public class  ListarSubtipoResponse
