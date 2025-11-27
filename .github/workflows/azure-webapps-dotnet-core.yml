@@ -61,6 +61,9 @@ jobs:
       - name: Publish API project
         run: dotnet publish ./Backend_Geo_Incidencia.API/Backend_Geo_Incidencia.API.csproj -c Release -o ./publish
 
+      - name: List publish output (debug)
+        run: ls -la ./publish
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
