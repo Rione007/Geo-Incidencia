@@ -33,54 +33,29 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Set up .NET Core
+      - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
-      - name: Set up dependency caching for faster builds
-        uses: actions/cache@v3
-        with:
-          path: ~/.nuget/packages
-          key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-nuget-
-
-      - name: Restore API project
-        run: dotnet restore ./Backend_Geo_Incidencia.API/Backend_Geo_Incidencia.API.csproj
-
-      - name: Build API project
-        run: dotnet build ./Backend_Geo_Incidencia.API/Backend_Geo_Incidencia.API.csproj -c Release --no-restore
-      
-      - name: Publish API project
-        run: dotnet publish ./Backend_Geo_Incidencia.API/Backend_Geo_Incidencia.API.csproj -c Release -o ./publish
+      - name: Restore and publish API
+        run: |
+          dotnet restore ./Backend_Geo_Incidencia.API/Backend_Geo_Incidencia.API.csproj
+          dotnet publish ./Backend_Geo_Incidencia.API/Backend_Geo_Incidencia.API.csproj -c Release -o ./publish
 
       - name: List publish output (debug)
         run: ls -la ./publish
 
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v4
-        with:
-          name: dotnet-app
-          path: ./publish
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: dotnet-app        
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: ./dotnet-app
+          package: ./publish
