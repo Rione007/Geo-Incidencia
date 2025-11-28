@@ -20,6 +20,8 @@
         public const string SpBuscarIncidenciasPorRadio = "dbo.SP_INCIDENCIAS_BUSCAR_POR_RADIO";
         public const string SpObtenerHeatmap = "dbo.SP_INCIDENCIAS_OBTENER_HEATMAP";
 
+        public const string SpListarIncidencias = "dbo.SP_LISTAR_INCIDENCIAS";
+
 
     }
 }

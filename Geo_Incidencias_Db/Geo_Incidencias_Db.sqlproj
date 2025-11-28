@@ -77,5 +77,6 @@
     <Build Include="Procedimientos\SP_REGISTRAR_INCIDENCIA.sql" />
     <Build Include="Procedimientos\SP_LISTAR_INCIDENCIAS_POR_USUARIO.sql" />
     <Build Include="Procedimientos\SP_OBTENER_INCIDENCIA_POR_ID.sql" />
+    <Build Include="Procedimientos\SP_LISTAR_INCIDENCIAS.sql" />
   </ItemGroup>
 </Project>
