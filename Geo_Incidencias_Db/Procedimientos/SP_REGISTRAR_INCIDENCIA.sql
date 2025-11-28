@@ -25,6 +25,7 @@ BEGIN
             ID_TIPO,
             ID_SUBTIPO,
             DESCRIPCION,
+            FECHA_INCIDENCIA,
             FECHA_REGISTRO,
             ESTADO
         )
@@ -37,13 +38,14 @@ BEGIN
             @SubtipoId,
             @Descripcion,
             @FechaIncidencia,
+            GETDATE(),
             1 -- Estado por defecto (activo, registrado)
         );
 
         SELECT 
             1 AS Fila,
             'Incidencia registrada correctamente' AS Mensaje,
-            SCOPE_IDENTITY() AS Id;
+            CAST(SCOPE_IDENTITY() AS INT) AS Id;
     
     END TRY
     BEGIN CATCH
