@@ -13,6 +13,7 @@ namespace Backend_Geo_Incidencia.Domain.Interfaces
         Task<Respuesta> RegistrarIncidenciaAsync(IncidenciaEntity entity);
         Task<List<IncidenciaEntity>> ListarIncidenciasPorUsuarioIdAsync(int usuarioId);
         Task<IncidenciaEntity?> ObtenerInciedenciaIdAsync(int id);
+        Task<List<IncidenciaEntity>> ListarIncidenciasAsync();
 
         // FUNCIONES PARA EL MAPA
         //------------------------------
