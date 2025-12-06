@@ -17,8 +17,10 @@ namespace Backend_Geo_Incidencia.Domain.Entities
         public decimal LATITUD { get; set; }
         public decimal LONGITUD { get; set; }
         public string? DESCRIPCION { get; set; }
-        public string? FOTO_URL { get; set; }
-        public string? DIRECCION_REFERENCIA { get;set; }
+        public string? DIRECCION_REFERENCIA { get; set; }
+        public string? FOTO_URL1 { get; set; }
+        public string? FOTO_URL2 { get; set; }
+        public string? FOTO_URL3 { get; set; }
         public bool ESTADO { get; set; }
         public string? DISTANCIA { get; set; } // Usado solo en busqueda por radio
     }
