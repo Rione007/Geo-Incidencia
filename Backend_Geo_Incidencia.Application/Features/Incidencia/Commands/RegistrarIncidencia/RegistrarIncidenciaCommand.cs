@@ -15,6 +15,10 @@ namespace Backend_Geo_Incidencia.Application.Features.Incidencia.Commands.Regist
         public int IdTipo { get; set; }
         public int IdSubtipo { get; set; }
         public string? Descripcion { get; set; }
+        public string? DIRECCION_REFERENCIA { get; set; }
+        public string? FOTO_URL1 { get; set; }
+        public string? FOTO_URL2 { get; set; }
+        public string? FOTO_URL3 { get; set; }
         public DateTime FechaIncidencia { get; set; }
       
     }

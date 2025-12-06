@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Dapper.SqlMapper;
 
 namespace Backend_Geo_Incidencia.Application.Features.Incidencia.Commands.RegistrarIncidencia
 {
@@ -41,6 +42,10 @@ namespace Backend_Geo_Incidencia.Application.Features.Incidencia.Commands.Regist
                     LATITUD = request.Latitud,
                     LONGITUD = request.Longitud,
                     DESCRIPCION = request.Descripcion,
+                    DIRECCION_REFERENCIA = request.DIRECCION_REFERENCIA, 
+                    FOTO_URL1 = request.FOTO_URL1,
+                    FOTO_URL2 = request.FOTO_URL2,
+                    FOTO_URL3 = request.FOTO_URL3,
                     FECHA_INCIDENCIA = request.FechaIncidencia,
                     FECHA_REGISTRO = DateTime.UtcNow
 
