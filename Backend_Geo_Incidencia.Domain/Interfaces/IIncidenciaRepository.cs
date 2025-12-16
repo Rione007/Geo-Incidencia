@@ -46,7 +46,7 @@ namespace Backend_Geo_Incidencia.Domain.Interfaces
         Task<List<HeatmapCeldaModel>> ObtenerHeatmapCeldasAsync(
             decimal minLat, decimal maxLat,
             decimal minLng, decimal maxLng,
-            int gridSize,
+            decimal gridSize,
             List<int>? tipos = null,
             List<int>? subtipos = null,
             DateTime? fechaDesde = null,

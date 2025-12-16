@@ -42,7 +42,7 @@ BEGIN
       AND (@ListaTipos IS NULL OR X.ID_TIPO IN (SELECT Id FROM @Tipos))
       AND (@ListaSubtipos IS NULL OR X.ID_SUBTIPO IN (SELECT Id FROM @Subtipos))
       AND (@FechaDesde IS NULL OR FECHA_REGISTRO >= @FechaDesde)
-      AND (@FechaHasta IS NULL OR FECHA_REGISTRO <= @FechaHasta)
+      AND (@FechaHasta IS NULL OR FECHA_REGISTRO < DATEADD(DAY, 1, @FechaHasta))
     ORDER BY FECHA_REGISTRO DESC;
 
 END

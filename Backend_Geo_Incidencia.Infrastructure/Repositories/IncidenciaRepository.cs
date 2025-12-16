@@ -32,13 +32,13 @@ namespace Backend_Geo_Incidencia.Infrastructure.Repositories
                     storedProcedure,
                     new
                     {
-                        MIN_LATITUD = minLat,
-                        MAX_LATITUD = maxLat,
-                        MIN_LONGITUD = minLng,
-                        MAX_LONGITUD = maxLng,
-                        TIPOS = tipos != null && tipos.Any() ? string.Join(",", tipos) : null,
-                        SUBTIPOS = subtipos != null && subtipos.Any() ? string.Join(",", subtipos) : null,
-                        DIAS = dias
+                        MinLat = minLat,
+                        MaxLat = maxLat,
+                        MinLng = minLng,
+                        MaxLng = maxLng,
+                        ListaTipos = tipos != null && tipos.Any() ? string.Join(",", tipos) : null,
+                        ListaSubTipos = subtipos != null && subtipos.Any() ? string.Join(",", subtipos) : null,
+                        Dias = dias
                     },
                     commandType: CommandType.StoredProcedure
                 );
@@ -68,13 +68,13 @@ namespace Backend_Geo_Incidencia.Infrastructure.Repositories
                     storedProcedure,
                     new
                     {
-                        LAT = lat,
-                        LNG = lng,
-                        METROS = metros,
-                        TIPOS = tipos != null && tipos.Any() ? string.Join(",", tipos) : null,
-                        SUBTIPOS = subtipos != null && subtipos.Any() ? string.Join(",", subtipos) : null,
-                        FECHA_DESDE = fechaDesde,
-                        FECHA_HASTA = fechaHasta
+                        Lat = lat,
+                        Lng = lng,
+                        Metros = metros,
+                        ListaTipos = tipos != null && tipos.Any() ? string.Join(",", tipos) : null,
+                        ListaSubtipos = subtipos != null && subtipos.Any() ? string.Join(",", subtipos) : null,
+                        FechaDesde = fechaDesde,
+                        FechaHasta = fechaHasta
                     },
                     commandType: CommandType.StoredProcedure
                 );
@@ -165,7 +165,7 @@ namespace Backend_Geo_Incidencia.Infrastructure.Repositories
             return response;
         }
 
-        public async Task<List<HeatmapCeldaModel>> ObtenerHeatmapCeldasAsync(decimal minLat, decimal maxLat, decimal minLng, decimal maxLng, int gridSize, List<int>? tipos = null, List<int>? subtipos = null, DateTime? fechaDesde = null, DateTime? fechaHasta = null)
+        public async Task<List<HeatmapCeldaModel>> ObtenerHeatmapCeldasAsync(decimal minLat, decimal maxLat, decimal minLng, decimal maxLng, decimal gridSize, List<int>? tipos = null, List<int>? subtipos = null, DateTime? fechaDesde = null, DateTime? fechaHasta = null)
         {
             var storedProcedure = DbConstantes.SpObtenerHeatmap;
             List<HeatmapCeldaModel> response = new();
@@ -178,15 +178,15 @@ namespace Backend_Geo_Incidencia.Infrastructure.Repositories
                     storedProcedure,
                     new
                     {
-                        MIN_LATITUD = minLat,
-                        MAX_LATITUD = maxLat,
-                        MIN_LONGITUD = minLng,
-                        MAX_LONGITUD = maxLng,
-                        GRIDSIZE = gridSize,
-                        TIPOS = tipos != null && tipos.Any() ? string.Join(",", tipos) : null,
-                        SUBTIPOS = subtipos != null && subtipos.Any() ? string.Join(",", subtipos) : null,
-                        FECHA_DESDE = fechaDesde,
-                        FECHA_HASTA = fechaHasta
+                        MinLat = minLat,
+                        MaxLat = maxLat,
+                        minLon = minLng,
+                        Maxlon = maxLng,
+                        TamCelda = gridSize,
+                        ListaTipos = tipos != null && tipos.Any() ? string.Join(",", tipos) : null,
+                        ListaSubtipos = subtipos != null && subtipos.Any() ? string.Join(",", subtipos) : null,
+                        FechaDesde = fechaDesde,
+                        FechaHasta = fechaHasta
                     },
                     commandType: CommandType.StoredProcedure
                 );

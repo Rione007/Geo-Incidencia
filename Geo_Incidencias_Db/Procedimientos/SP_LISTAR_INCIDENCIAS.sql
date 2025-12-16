@@ -17,7 +17,8 @@ BEGIN
         FECHA_INCIDENCIA,
         LATITUD,
         LONGITUD,
-        DESCRIPCION
+        DESCRIPCION,
+        ESTADO
     FROM INCIDENCIA
     WHERE
         ESTADO = 1

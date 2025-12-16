@@ -10,6 +10,7 @@ namespace Backend_Geo_Incidencia.API.Controllers
     {
         public IMediator _mediator;
 
+
         protected IMediator Mediator => _mediator ?? (_mediator = HttpContext.RequestServices.GetService<IMediator>());
 
 

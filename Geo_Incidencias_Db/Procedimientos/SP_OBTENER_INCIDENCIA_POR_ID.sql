@@ -15,7 +15,9 @@ BEGIN
         ID_SUBTIPO,
         DESCRIPCION,
         FECHA_INCIDENCIA,
-        FOTO_URL,
+        FOTO_URL1,
+        FOTO_URL2,
+        FOTO_URL3
         DIRECCION_REFERENCIA
     FROM INCIDENCIA
     WHERE ID_INCIDENCIA = @IdIncidencia;

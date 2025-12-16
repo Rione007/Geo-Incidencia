@@ -17,8 +17,6 @@
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.14.0" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Features\Incidencia\Commands\ListarPorUsuario\" />
-	  <Folder Include="Features\Incidencia\Commands\ObtenerIncidencia\" />
 	  <Folder Include="Features\Incidencia\Commands\RegistrarIncidencia\" />
 	  <Folder Include="Features\Usuario\Commands\ActualizarUsuario\" />
 	</ItemGroup>
