@@ -25,5 +25,6 @@
         public const string SpObtenerHeatmap = "dbo.SP_INCIDENCIAS_OBTENER_HEATMAP";
 
 
+
     }
 }

@@ -1,23 +1,26 @@
-﻿CREATE PROCEDURE SP_REGISTRAR_INCIDENCIA
+﻿CREATE PROCEDURE dbo.SP_REGISTRAR_INCIDENCIA
 (
-    @IdUsuario      INT,
-    @Latitud        DECIMAL(10,7),
-    @Longitud       DECIMAL(10,7),
-    @TipoId         INT,
-    @SubtipoId      INT,
-    @Descripcion    VARCHAR(500),
-    @FechaIncidencia  DATETIME = NULL
+    @IdUsuario           INT,
+    @Latitud             DECIMAL(10,7),
+    @Longitud            DECIMAL(10,7),
+    @TipoId              INT,
+    @SubtipoId           INT,
+    @Descripcion         VARCHAR(500),
+    @DireccionReferencia VARCHAR(250) = NULL,
+    @FotoUrl1            VARCHAR(500) = NULL,
+    @FotoUrl2            VARCHAR(500) = NULL,
+    @FotoUrl3            VARCHAR(500) = NULL,
+    @FechaIncidencia     DATETIME = NULL
 )
 AS
 BEGIN
     SET NOCOUNT ON;
 
     BEGIN TRY
-        
         IF @FechaIncidencia IS NULL
             SET @FechaIncidencia = GETDATE();
 
-        INSERT INTO INCIDENCIA
+        INSERT INTO dbo.INCIDENCIA
         (
             ID_USUARIO,
             LATITUD,
@@ -25,6 +28,11 @@ BEGIN
         ID_TIPO,
         ID_SUBTIPO,
             DESCRIPCION,
+            DIRECCION_REFERENCIA,
+            FOTO_URL1,
+            FOTO_URL2,
+            FOTO_URL3,
+            FECHA_INCIDENCIA,
             FECHA_REGISTRO,
             ESTADO
         )
@@ -36,22 +44,25 @@ BEGIN
             @TipoId,
             @SubtipoId,
             @Descripcion,
+            @DireccionReferencia,
+            @FotoUrl1,
+            @FotoUrl2,
+            @FotoUrl3,
             @FechaIncidencia,
-            1 -- Estado por defecto (activo, registrado)
+            GETDATE(),
+            1
         );
 
         SELECT 
             1 AS Fila,
             'Incidencia registrada correctamente' AS Mensaje,
-            SCOPE_IDENTITY() AS Id;
-    
+            CAST(SCOPE_IDENTITY() AS INT) AS Id;
     END TRY
     BEGIN CATCH
-
         SELECT 
             0 AS Fila,
             ERROR_MESSAGE() AS Mensaje,
             NULL AS Id;
-
     END CATCH
-END
+END;
+GO

@@ -242,7 +242,7 @@ namespace Backend_Geo_Incidencia.Infrastructure.Repositories
                 var connection = _factoryConnection.GetConnection();
 
                 // Ejecutamos el SP y esperamos una fila con (Fila, Mensaje, Id) 
-                respuesta = await connection.QueryFirstOrDefaultAsync(
+                respuesta = await connection.QueryFirstOrDefaultAsync<Respuesta>(
                     storedProcedure,
                     new
                     {
@@ -252,6 +252,10 @@ namespace Backend_Geo_Incidencia.Infrastructure.Repositories
                         TipoId = entity.ID_TIPO,
                         SubtipoId = entity.ID_SUBTIPO,
                         Descripcion = entity.DESCRIPCION,
+                        DireccionReferencia = entity.DIRECCION_REFERENCIA, // si lo tienes
+                        FotoUrl1 = entity.FOTO_URL1, // nuevos campos
+                        FotoUrl2 = entity.FOTO_URL2,
+                        FotoUrl3 = entity.FOTO_URL3,
                         FechaIncidencia = entity.FECHA_INCIDENCIA
                     },
                     commandType: CommandType.StoredProcedure
