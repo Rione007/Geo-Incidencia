@@ -22,8 +22,8 @@ BEGIN
             ID_USUARIO,
             LATITUD,
             LONGITUD,
-            ID_TIPO,
-            ID_SUBTIPO,
+        ID_TIPO,
+        ID_SUBTIPO,
             DESCRIPCION,
             FECHA_REGISTRO,
             ESTADO

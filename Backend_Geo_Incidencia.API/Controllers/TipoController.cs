@@ -9,15 +9,13 @@ namespace Backend_Geo_Incidencia.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TipoController : ControllerBase
+    public class TipoController : MiControllerBase
     {
-        private readonly IMediator _mediator;
-        public TipoController(IMediator mediator) => _mediator = mediator;
 
         [HttpGet]
         public async Task<IActionResult> ListarTipos()
         {
-            var result = await _mediator.Send(new ListarTipoCommand());
+            var result = await Mediator.Send(new ListarTipoCommand());
             var respuesta = result?.FirstOrDefault() ?? new ListarTipoResponse
             {
                 Tipos = new List<TipoDto>(),
@@ -35,7 +33,7 @@ namespace Backend_Geo_Incidencia.API.Controllers
         [HttpGet("{id:int}")]
         public async Task<IActionResult> ObtenerTipo(int id)
         {
-            var result = await _mediator.Send(new ObtenerTipoCommand { ID_TIPO = id });
+            var result = await Mediator.Send(new ObtenerTipoCommand { ID_TIPO = id });
 
             if (result.Exito)
                 return Ok(ApiResponse<TipoDto>.Ok(result.Tipo, "Tipo obtenido"));

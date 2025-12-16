@@ -93,6 +93,49 @@ namespace Backend_Geo_Incidencia.Infrastructure.Repositories
             return response;
         }
 
+        public async Task<List<IncidenciaEntity>> ListarIncidenciasAsync(
+            int? tipo = null,
+            int? subtipo = null,
+            DateTime? fechaDesde = null,
+            DateTime? fechaHasta = null,
+            int limit = 50
+        )
+        {
+            var storedProcedure = DbConstantes.SpListarIncidencias;
+            List<IncidenciaEntity> response = new();
+
+            try
+            {
+                var connection = _factoryConnection.GetConnection();
+
+                var result = await connection.QueryAsync<IncidenciaEntity>(
+                    storedProcedure,
+                    new
+                    {
+                        TIPO = tipo,
+                        SUBTIPO = subtipo,
+                        FECHA_DESDE = fechaDesde,
+                        FECHA_HASTA = fechaHasta,
+                        LIMIT = limit
+                    },
+                    commandType: CommandType.StoredProcedure
+                );
+
+                response = result.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                _factoryConnection.CloseConnection();
+            }
+
+            return response;
+        }
+
+
         public async Task<List<IncidenciaEntity>> ListarIncidenciasPorUsuarioIdAsync(int usuarioId)
         {
             var storedProcedure = DbConstantes.SpListarIncidenciasPorUsuarioId;

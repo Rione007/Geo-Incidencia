@@ -13,13 +13,9 @@ namespace Backend_Geo_Incidencia.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsuarioController : ControllerBase
+    public class UsuarioController : MiControllerBase
     {
-        private readonly IMediator Mediator;
-        public UsuarioController(IMediator Mediator)
-        {
-            this.Mediator = Mediator;
-        }
+
         [HttpPost("Registrar")]
         public async Task<IActionResult> CrearUsuario([FromBody] RegistrarUsuarioCommand request)
         {

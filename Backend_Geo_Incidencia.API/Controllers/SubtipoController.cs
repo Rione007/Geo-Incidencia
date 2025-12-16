@@ -9,15 +9,14 @@ namespace Backend_Geo_Incidencia.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SubtipoController : ControllerBase
+    public class SubtipoController : MiControllerBase
     {
-        private readonly IMediator _mediator;
-        public SubtipoController(IMediator mediator) => _mediator = mediator;
+
 
         [HttpGet]
         public async Task<IActionResult> ListarSubtipos()
         {
-            var result = await _mediator.Send(new ListarSubtipoCommand());
+            var result = await Mediator.Send(new ListarSubtipoCommand());
             var respuesta = result?.FirstOrDefault() ?? new ListarSubtipoResponse
             {
                 Subtipos = new List<SubtipoDto>(),
@@ -34,7 +33,7 @@ namespace Backend_Geo_Incidencia.API.Controllers
         [HttpGet("{id:int}")]
         public async Task<IActionResult> ObtenerSubtipo(int id)
         {
-            var result = await _mediator.Send(new ObtenerSubtipoCommand { ID_SUBTIPO = id });
+            var result = await Mediator.Send(new ObtenerSubtipoCommand { ID_SUBTIPO = id });
 
             if (result.Exito)
                 return Ok(ApiResponse<SubtipoDto>.Ok(result.Subtipo, "Subtipo obtenido"));
