@@ -13,6 +13,7 @@ namespace Backend_Geo_Incidencia.Application.Features.Incidencia.Dtos
         public IncidenciaProfile()
         {
             CreateMap<Backend_Geo_Incidencia.Domain.Entities.IncidenciaEntity, IncidenciaDto>().ReverseMap();
+            CreateMap<IncidenciaListadoDto, IncidenciaEntity>().ReverseMap();
         }
     }
 }

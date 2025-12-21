@@ -35,7 +35,7 @@ namespace Backend_Geo_Incidencia.Application.Features.Incidencia.Commands.Listar
 
                 var lista = await _incidenciaRepository.ListarIncidenciasPorUsuarioIdAsync(request.UsuarioId);
 
-                response.Incidencias = _mapper.Map<List<IncidenciaDto>>(lista);
+                response.Incidencias = _mapper.Map<List<IncidenciaListadoDto>>(lista);
                 response.CodigoRespuesta = 0;
                 response.Mensaje = "Consulta realizada correctamente";
             }

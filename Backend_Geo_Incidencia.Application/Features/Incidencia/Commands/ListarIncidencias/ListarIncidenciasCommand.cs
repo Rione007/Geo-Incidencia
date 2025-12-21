@@ -18,7 +18,7 @@ namespace Backend_Geo_Incidencia.Application.Features.Incidencia.Commands.Listar
     }
     public class ListarIncidenciasResponse
     {
-        public List<IncidenciaDto> incidencias { get; set; } // si es objeto el objeto
+        public List<IncidenciaListadoDto> incidencias { get; set; } // si es objeto el objeto
         public string Mensaje { get; set; }
         public int CodigoRespuesta { get; set; }
         public bool Exito => CodigoRespuesta == 0;

@@ -65,7 +65,7 @@ namespace Backend_Geo_Incidencia.API.Controllers
             });
 
             if (result.Exito)
-                return Ok(ApiResponse<List<IncidenciaDto>>.Ok(result.incidencias, result.Mensaje));
+                return Ok(ApiResponse<List<IncidenciaListadoDto>>.Ok(result.incidencias, result.Mensaje));
 
             return BadRequest(ApiResponse<object>.Fail(result.Mensaje, result.CodigoRespuesta));
         }
@@ -168,7 +168,7 @@ namespace Backend_Geo_Incidencia.API.Controllers
             });
 
             if (result.Exito)
-                return Ok(ApiResponse<List<IncidenciaDto>>.Ok(result.Incidencias, result.Mensaje));
+                return Ok(ApiResponse<List<IncidenciaListadoDto>>.Ok(result.Incidencias, result.Mensaje));
 
             return BadRequest(ApiResponse<object>.Fail(result.Mensaje, result.CodigoRespuesta));
         }

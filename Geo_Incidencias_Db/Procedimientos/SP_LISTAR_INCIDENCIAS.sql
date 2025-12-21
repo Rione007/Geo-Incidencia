@@ -15,10 +15,8 @@ BEGIN
         ID_TIPO,
         ID_SUBTIPO,
         FECHA_INCIDENCIA,
-        LATITUD,
-        LONGITUD,
         DESCRIPCION,
-        ESTADO
+        DIRECCION_REFERENCIA
     FROM INCIDENCIA
     WHERE
         ESTADO = 1

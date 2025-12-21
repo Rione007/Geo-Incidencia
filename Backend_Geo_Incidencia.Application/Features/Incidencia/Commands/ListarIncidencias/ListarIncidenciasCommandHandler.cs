@@ -40,7 +40,7 @@ namespace Backend_Geo_Incidencia.Application.Features.Incidencia.Handlers
                     request.Limit
                 );
 
-                var dtoList = _mapper.Map<List<IncidenciaDto>>(incidencias);
+                var dtoList = _mapper.Map<List<IncidenciaListadoDto>>(incidencias);
 
                 return new ListarIncidenciasResponse
                 {
@@ -55,7 +55,7 @@ namespace Backend_Geo_Incidencia.Application.Features.Incidencia.Handlers
 
                 return new ListarIncidenciasResponse
                 {
-                    incidencias = new List<IncidenciaDto>(),
+                    incidencias = new List<IncidenciaListadoDto>(),
                     Mensaje = ex.Message,
                     CodigoRespuesta = 500
                 };
