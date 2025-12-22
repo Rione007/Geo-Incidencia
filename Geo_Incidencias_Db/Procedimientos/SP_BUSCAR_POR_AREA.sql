@@ -7,7 +7,7 @@
 
     @ListaTipos     VARCHAR(MAX) = NULL,   -- Ej: '1,3,5'
     @ListaSubtipos  VARCHAR(MAX) = NULL,   -- Ej: '10,11,12'
-    @Dias           INT = NULL             -- Últimos X días
+    @Dias           INT = NULL             
 )
 AS
 BEGIN
